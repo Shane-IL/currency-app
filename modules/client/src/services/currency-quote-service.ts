@@ -12,7 +12,7 @@ const createCurrencyQuoteService = () => {
                 const response = await fetch(`${currencyQuoteAPIPath}?from_currency_code=${currencyFrom}&to_currency_code=${currencyTo}&amount=${amount}`);
                 const data = await response.json();
                 if(data.error) {
-                    throw new Error(`Error from server`, data.error);
+                    throw new Error(`Error from server: ${data.error}`);
                 }
                 callback(data);
                 

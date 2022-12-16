@@ -18,11 +18,11 @@ const cacheValidityTimeout:number = 1000 * 10; //10 seconds
 let cacheValidityTimeoutId:NodeJS.Timeout | null = null;
 
 //helper functions;
-const toMaxDecimalPlaces = (num:number, decimals:number) => {
+const toMaxDecimalPlaces = (num:number, decimals:number):number => {
   const factor = Math.pow(10, decimals);
   return Math.round((num + Number.EPSILON) * factor) / factor;
 }
-const getExchangeRate = (fromCurrencyRate:number, toCurrencyRate:number) => {
+const getExchangeRate = (fromCurrencyRate:number, toCurrencyRate:number):number => {
   return toMaxDecimalPlaces((1 / fromCurrencyRate) * toCurrencyRate, 3);
 };
 

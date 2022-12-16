@@ -1,12 +1,13 @@
 {
-  "name": "currency-exchange-client",
+  "name": "@currency-converter/client",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "compile": "tsc -b"
   },
   "dependencies": {
     "mobx": "^6.7.0",
