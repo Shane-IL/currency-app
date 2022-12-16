@@ -8,7 +8,7 @@ npm run serve
 ```
 
 The server runs on localhost:4000 using nodemon and express.
-*Note that I was using fetch in node, I beleive that it's only supported from version 17.5*
+*Note that I was using fetch in node, I believe that it's only supported from version 17.5*
 *If I had a bit more time I would have dockerized the server app but unfortunately my wife is getting impatient*
 
 #### To run the client (in a separate terminal instance): 
