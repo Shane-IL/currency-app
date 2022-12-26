@@ -26,12 +26,12 @@
     "outDir": "./bin",
     "composite": true
   },
-  // "include": [
-  //   "src"
-  // ],
-  // "references": [
-  //   {
-  //     "path": "./tsconfig.node.json"
-  //   }
-  // ]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
