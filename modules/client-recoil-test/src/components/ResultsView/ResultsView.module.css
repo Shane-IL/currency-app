@@ -1,0 +1,19 @@
+.results_view_container {
+    display: grid;
+    margin: 40px auto;
+    color: #fff;
+    font-size: x-large;
+}
+
+.error_message {
+    text-decoration: wavy;
+    color: #B00020;
+    place-self: center;
+    grid-column: span 3;
+}
+
+@media only screen and (max-width: 820px) {
+    .results_view_container {
+        font-size: medium;
+    }
+}
