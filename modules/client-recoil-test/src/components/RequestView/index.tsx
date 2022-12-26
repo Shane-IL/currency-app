@@ -45,7 +45,7 @@ const RequestView = () => {
     };
 
     useEffect(() => {
-        //This is the validation logic, for a real app I'd make a custom hook for th
+        //This is the validation logic, for a real app I'd make a custom hook for this
         if (amount === null || !currencyFrom || !currencyTo) {
             return;
         }

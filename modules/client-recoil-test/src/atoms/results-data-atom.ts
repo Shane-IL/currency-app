@@ -1,4 +1,4 @@
-import { atom } from 'recoil';
+import { atom, RecoilState } from 'recoil';
 
 export type ConversionResult = {
     error?: string | null;
@@ -8,7 +8,7 @@ export type ConversionResult = {
 } | null;
 
 
-export const resultsDataAtom = atom<ConversionResult>({
+export const resultsDataAtom:RecoilState<ConversionResult | null> = atom<ConversionResult>({
     key: 'resultsDataAtom',
     default: null
 });

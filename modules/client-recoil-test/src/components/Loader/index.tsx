@@ -14,10 +14,6 @@ const Loader = observer(() => {
 
     const loading = useRecoilValue(loadingAtom);
 
-    //I'm handling the component showing or not showing by the "isFetching" here, but I could have done it in the parent component
-    //It would have just meant adding another subcomponent to the parent component so everything would sit in the same context provicer
-    //So I did this to save time.
-
     return loading ? (
         <div className={loader_container}>
             <h3 className={loader_title}>Getting the latest currency data...</h3>

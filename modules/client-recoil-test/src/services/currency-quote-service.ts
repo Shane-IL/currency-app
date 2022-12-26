@@ -1,8 +1,6 @@
 import {serverURL} from "../constants/external-constants";
 
-//I would have exported this to a types folder and not have it sitting in a different logical entity
-//But it's the only case for a shared type in the app so I left it here.
-import { ConversionResult } from "../atoms/results-data-store";
+import { ConversionResult } from "../atoms/results-data-atom";
 
 const createCurrencyQuoteService = () => {
     const currencyQuoteAPIPath = `${serverURL}/api/quote`;
