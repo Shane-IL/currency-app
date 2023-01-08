@@ -1,25 +1,20 @@
-import { observer } from "mobx-react";
 import { useRecoilValue } from "recoil";
 
-import { loadingAtom } from "../../atoms/loading-atom";
+import loadingAtom from "../../atoms/loading-atom";
 
 import styles from "./Loader.module.css";
 
-const Loader = observer(() => {
-    const {
-        loader_container,
-        loader_title,
-        lds_dual_ring
-    } = styles;
+function Loader() {
+    const { loaderContainer, loaderTitle, ldsDualRing } = styles;
 
     const loading = useRecoilValue(loadingAtom);
 
     return loading ? (
-        <div className={loader_container}>
-            <h3 className={loader_title}>Getting the latest currency data...</h3>
-            <div className={lds_dual_ring}></div>
+        <div className={loaderContainer}>
+            <h3 className={loaderTitle}>Getting the latest currency data...</h3>
+            <div className={ldsDualRing} />
         </div>
-    ) : null
-});
+    ) : null;
+}
 
 export default Loader;

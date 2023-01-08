@@ -1,6 +1,8 @@
 import { atom, RecoilState } from "recoil";
 
-export const loadingAtom:RecoilState<boolean> = atom({
-    key: 'loadingAtom',
-    default: false
+const loadingAtom: RecoilState<boolean> = atom({
+    key: "loadingAtom",
+    default: false,
 });
+
+export default loadingAtom;

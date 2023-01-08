@@ -23,6 +23,7 @@
     "declaration": true,
     "sourceMap": true,
     "skipLibCheck": true,
+    "rootDir": "./src",
     "outDir": "./bin",
     "composite": true,
     "types": [
@@ -34,8 +35,6 @@
   },
   "include": [
     "src",
-    "vite.config.ts",
-    ".eslintrc.cjs"
   ],
   "references": [
     {
