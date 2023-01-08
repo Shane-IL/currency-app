@@ -5,11 +5,11 @@ import cors from 'cors';
 type Currency = "USD" | "EUR" | "ILS";
 
 const app:Express = express();
-const port:number = 4000;
+const port = 4000;
 //I had to use this api, the other one was problematic with getting a client key
-const currencyAPI:string = 'https://api.currencyapi.com/v3/latest';
+const currencyAPI = "https://api.currencyapi.com/v3/latest";
 //obviously this would be a stored as a secret in a real application
-const currencyAPIKey:string = "UXmc5tFr8XWpyjDmdJ8QS9Ilvg3prxcJOX7iQ86M";
+const currencyAPIKey = "UXmc5tFr8XWpyjDmdJ8QS9Ilvg3prxcJOX7iQ86M";
 
 const currencies:string[] = ['EUR', 'USD', 'ILS'];
 
