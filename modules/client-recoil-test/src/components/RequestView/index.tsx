@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import { DebounceInput } from 'react-debounce-input';
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 
 import currencyQuoteService from "../../services/currency-quote-service";
 
