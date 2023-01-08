@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <RecoilRoot>
-        <h1>Currency converter</h1>
+        <h1>Currency Converter</h1>
         <div className="card">
           <div>
             <RequestView />

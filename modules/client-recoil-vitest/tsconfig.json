@@ -26,13 +26,16 @@
     "outDir": "./bin",
     "composite": true,
     "types": [
-      "vitest/globals"
+      "vitest/globals",
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
     ]
   },
   "include": [
     "src",
-    "../../.eslintrc.cjs",
-    "tests"
+    "vite.config.ts",
+    ".eslintrc.cjs"
   ],
   "references": [
     {
