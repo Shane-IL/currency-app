@@ -28,7 +28,9 @@ module.exports = {
     "plugins": [
         "react",
         "prettier",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "testing-library",
+        "jest-dom"
     ],
     "rules": {
     },
