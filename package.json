@@ -2,15 +2,13 @@
     "name": "currency-converter",
     "private": true,
     "scripts": {
-        "compile": "tsc -b -w -i",
+        "compile": "tsc -b tsconfig.json",
         "eslint": "eslint src/**/**.{ts,tsx}",
-        "eslint:fix": "eslint src/**/**.{ts,tsx} --fix",
-        "build": "npm run build -ws",
-        "clean": "npx -y rimraf node_modules **/node_modules/ package-lock.json && npm i",
-        "lint": "npm run lint -ws"
+        "eslint:fix": "eslint src/**/**.{ts,tsx} --fix"
     },
     "devDependencies": {
         "@types/node": "^18.11.15",
+        "@typescript-eslint/eslint-plugin": "^5.48.0",
         "npm-run-all": "^4.1.5",
         "ts-node": "^10.9.1"
     },
@@ -18,6 +16,9 @@
         "modules/*"
     ],
     "dependencies": {
+        "@currency-converter/client-recoil": "^1.0.0",
+        "@currency-converter/client-recoil-vitest": "^1.0.0",
+        "@currency-converter/server": "^1.0.0",
         "typescript": "^4.9.4"
     }
 }

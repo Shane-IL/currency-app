@@ -34,6 +34,7 @@ module.exports = {
         },
         sourceType: "module",
         project: "./**/tsconfig.json",
+        tsconfigRootDir: __dirname,
     },
     plugins: [
         "react",
@@ -44,6 +45,19 @@ module.exports = {
     ],
     rules: {
         "no-console": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                devDependencies: [
+                    "**/*.test.ts",
+                    "**/*.test.tsx",
+                    "**/*.spec.ts",
+                    "tests/**/*",
+                ],
+            },
+        ],
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/no-nested-ternary": "off",
         "@typescript-eslint/quotes": [
             "error",
             "double",

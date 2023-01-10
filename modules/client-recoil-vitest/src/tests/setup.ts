@@ -1,5 +1,6 @@
-import { expect } from 'vitest';
-import matchers from '@testing-library/jest-dom/matchers';
+/* eslint-disable import/no-extraneous-dependencies */
+import { expect } from "vitest";
+import matchers from "@testing-library/jest-dom/matchers";
 
 // extends Vitest's expect method with methods from react-testing-library
 expect.extend(matchers);

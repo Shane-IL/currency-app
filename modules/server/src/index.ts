@@ -6,7 +6,10 @@ import cors from "cors";
 type Currency = "USD" | "EUR" | "ILS";
 type JSONResponse = {
     data?: {
-        [key in Currency]: number;
+        [x: string]: {
+            code: Currency;
+            value: number;
+        };
     };
     message?: string;
 };
@@ -59,16 +62,19 @@ const updateCurrencyData = async () => {
             clearTimeout(cacheValidityTimeoutId as NodeJS.Timeout);
 
         const currenciesData = data.data;
-        for (const currencyCode in currenciesData) {
+        if (!currenciesData) throw new Error("Currency data is not available");
+
+        Object.keys(currenciesData).forEach((currencyCode) => {
             currenciesMapCache.set(
                 currencyCode,
                 currenciesData[currencyCode].value
             );
-        }
+        });
+
         cacheValidityTimeoutId = setTimeout(() => {
-            for (const currencyCode in currenciesData) {
+            Object.keys(currenciesData).forEach((currencyCode) => {
                 currenciesMapCache.set(currencyCode, null);
-            }
+            });
         }, cacheValidityTimeout);
     } catch (error) {
         // Just logging service errors to the console here

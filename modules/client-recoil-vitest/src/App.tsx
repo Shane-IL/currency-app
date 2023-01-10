@@ -1,29 +1,27 @@
-import './App.css'
-import Loader from './components/Loader';
+import "./App.css";
+import { RecoilRoot } from "recoil";
+import Loader from "./components/Loader";
 
-import RequestView from './components/RequestView';
-import ResultsView from './components/ResultsView';
+import RequestView from "./components/RequestView";
+import ResultsView from "./components/ResultsView";
 
-import { RecoilRoot } from 'recoil'
-
-const App = () => {
-
-  return (
-    <div className="App">
-      <RecoilRoot>
-        <h1>Currency Converter</h1>
-        <div className="card">
-          <div>
-            <RequestView />
-          </div>
-          <Loader />
-          <div>
-            <ResultsView />
-          </div>
+function App() {
+    return (
+        <div className="App">
+            <RecoilRoot>
+                <h1>Currency Converter</h1>
+                <div className="card">
+                    <div>
+                        <RequestView />
+                    </div>
+                    <Loader />
+                    <div>
+                        <ResultsView />
+                    </div>
+                </div>
+            </RecoilRoot>
         </div>
-      </RecoilRoot>
-    </div>
-  )
+    );
 }
 
-export default App
+export default App;

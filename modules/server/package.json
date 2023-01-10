@@ -4,7 +4,6 @@
   "description": "",
   "main": "bin/index.js",
   "scripts": {
-    "build": "npx tsc",
     "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q bin/index.js\"",
     "compile": "tsc -b"

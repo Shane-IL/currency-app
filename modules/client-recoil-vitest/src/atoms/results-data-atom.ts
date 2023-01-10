@@ -7,8 +7,10 @@ export type ConversionResult = {
     amount?: number;
 } | null;
 
-export const resultsDataAtom: RecoilState<ConversionResult | null> =
+const resultsDataAtom: RecoilState<ConversionResult | null> =
     atom<ConversionResult>({
         key: "resultsDataAtom",
         default: null,
     });
+
+export default resultsDataAtom;

@@ -34,7 +34,15 @@
     ]
   },
   "include": [
-    "src",
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "bin",
+    "tests",
+    "*.test.ts",
+    "*.test.tsx",
+    "vite.config.ts"
   ],
   "references": [
     {

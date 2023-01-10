@@ -1,15 +1,15 @@
-.request_view_container {
+.requestViewContainer {
     display: grid;
 }
 
-.inputs_container {
+.inputsContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-self: center;
 }
 
-.validation_message {
+.validationMessage {
     text-decoration: wavy;
     color: #B00020;
     place-self: center;
@@ -30,7 +30,7 @@ select {
 }
 
 @media only screen and (max-width: 820px) {
-    .inputs_container {
+    .inputsContainer {
         grid-template-columns: auto;
         grid-template-rows: repeat(4, 1fr);
         place-items: end;
@@ -38,7 +38,7 @@ select {
         margin-left: -38px;
     }
 
-    .validation_message {
+    .validationMessage {
         grid-column: 1;
         margin-right: -45px;
     }
